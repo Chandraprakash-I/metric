@@ -1,3 +1,6 @@
 # Metric-Imperial Converter
+(Day 01- (04/09/2023))
+(My first project with a readme file)
 
-This is the boilerplate for the Metric-Imperial Converter project. Instructions for building your project can be found at https://www.freecodecamp.org/learn/quality-assurance/quality-assurance-projects/metric-imperial-converter
+# Description
+ Converts metric units(liters,kg,km) to imperial units(gal,lbs,mi) and viceversa. It will only support the mentioned units conversion.

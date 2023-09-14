@@ -18,12 +18,21 @@ app.use(cors({origin: '*'})); //For FCC testing purposes only
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+//-----------
 
-//Index page (static HTML)
-app.route('/')
-  .get(function (req, res) {
-    res.sendFile(process.cwd() + '/views/index.html');
-  });
+
+  //TESTING
+  // const ConvertHandler = require('./controllers/convertHandler.js');
+  // let c=new ConvertHandler();
+  
+  // console.log("TESTING getnum: "+c.getNum('.1/.2mi')); 
+  // console.log("TESTING getUnit: "+c.getUnit('.1/.2mi')); 
+  // console.log("TESTING getReturnUnit: "+c.getReturnUnit(c.getUnit('.1/.2mi'))); 
+  // console.log("TESTING spellOutUnit: "+c.spellOutUnit(c.getUnit('.1/.2mi'))); 
+  // console.log("convert: "+c.convert(c.getNum('mi'),c.getUnit('mi')));
+  // console.log("string: "+c.getString(3,'mi',34,'km'));
+
+
 
 //For FCC testing purposes
 fccTestingRoutes(app);
@@ -37,10 +46,10 @@ app.use(function(req, res, next) {
     .type('text')
     .send('Not Found');
 });
-
+//----
 const port = process.env.PORT || 3000;
 
-//Start our server and tests!
+// Start our server and tests!
 app.listen(port, function () {
   console.log("Listening on port " + port);
   if(process.env.NODE_ENV==='test') {
